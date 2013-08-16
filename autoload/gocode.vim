@@ -18,7 +18,7 @@ fu! s:gocodeCurrentBuffer()
 	return file
 endf
 
-let s:vim_system = get(g:, 'gocomplete#system_function', function('system'))
+let s:vim_system = get(g:, 'gocode#system_function', function('system'))
 
 fu! s:system(str, ...)
 	return (a:0 == 0 ? s:vim_system(a:str) : s:vim_system(a:str, join(a:000)))
@@ -75,13 +75,13 @@ fu! s:gocodeAutocomplete()
 	return result
 endf
 
-fu! gocomplete#Complete(findstart, base)
+fu! gocode#Complete(findstart, base)
 	"findstart = 1 when we need to get the text length
 	if a:findstart == 1
-		execute "silent let g:gocomplete_completions = " . s:gocodeAutocomplete()
-		return col('.') - g:gocomplete_completions[0] - 1
+		execute "silent let g:gode_completions = " . s:gocodeAutocomplete()
+		return col('.') - g:gode_completions[0] - 1
 	"findstart = 0 when we need to return the list of completions
 	else
-		return g:gocomplete_completions[1]
+		return g:gocode_completions[1]
 	endif
 endf
