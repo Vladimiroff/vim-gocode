@@ -78,8 +78,8 @@ endf
 fu! gocode#Complete(findstart, base)
 	"findstart = 1 when we need to get the text length
 	if a:findstart == 1
-		execute "silent let g:gode_completions = " . s:gocodeAutocomplete()
-		return col('.') - g:gode_completions[0] - 1
+		execute "silent let g:gocode_completions = " . s:gocodeAutocomplete()
+		return col('.') - g:gocode_completions[0] - 1
 	"findstart = 0 when we need to return the list of completions
 	else
 		return g:gocode_completions[1]
