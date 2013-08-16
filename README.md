@@ -1,20 +1,24 @@
-vim-gocode
+gocode.vim
 ==========
 
 All credit goes to [nsf/code](http://github.com/nsf/gocode)
 
 ## Installation
 
+You need to install gocode first.
+
+    go get -u github.com/nsf/gocode
+
 ### Vundle
 
 Add this line to your ~/.vimrc configuration file :
 
-> Bundle 'Blackrush/vim-gocode'
+    Bundle 'Vladimiroff/vim-gocode'
 
 And then run vim :
 
-> vim +BundleInstall
+    vim +BundleInstall
 
 ### Pathogen
 
-*todo*
+Clone the plugin into your ~/.vim/bundle directory
